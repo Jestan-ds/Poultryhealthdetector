@@ -36,7 +36,7 @@ MODEL = tf.keras.models.load_model(MODEL_PATH)
 
 @app.get("/", response_class=HTMLResponse)
 async def read_index():
-    with open("index.html") as f:
+    with open("./Project/index.html") as f:
         return f.read()
 
 def read_file_as_image(data) -> np.ndarray:
